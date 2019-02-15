@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Age Verification - {keyword}</title>
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.min.css">
+<style>
+.leadtop {
+	font-size: 10px;
+	margin-top: 60px;
+}
+body{background-image:url(image/bg.jpg);background-position:center center;background-repeat:no-repeat;background-attachment:fixed;background-size:cover;background-color:#464646; overflow:hidden;}
+</style>
+</head>
+<body>
+      <div class="container  text-center">
+            <div class="content-wrapper">
+<p class="leadtop">Page Loading in <span id="timer">START</span> Seconds..</p>
+<p class="lead age1">You Must be 18 or Older to Enter!</p>
+<div class="row">
+<h1>18+</h1>
+ <p class="lead">Click below to continue..</p> 
+</div>
+
+<div class="textwidget">
+ <img  class="zoom"  src="image/300x250_1.jpg" alt="Sample300x250"> 
+</div>
+
+</div>
+</div>
+<script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var min = 100;
+    var max = 500;
+    var rnd = Math.floor(Math.random() * (max - min + 1)) + min;
+    var seconds = rnd;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 100 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+		location.href = "https://google.com";
+            if(mins > 1){
+
+              setTimeout(function () { countdown(mins - 1); }, 1000);
+            }
+        }
+    }
+    tick();
+}
+countdown(1);
+</script>
+</body>
+</html>
